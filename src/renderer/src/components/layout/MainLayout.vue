@@ -21,10 +21,20 @@
                     :to="{name:'another'}">anotherPage</router-link>
                 </li>
             </ul>
+            <AuthPopupComp/>
         </div>
         <slot></slot>
     </div>
 </template>
+<script lang="js">
+    import AuthPopupComp from '../AuthPopupComp.vue';
+    export default {
+    components: {
+        AuthPopupComp // Register the component here
+    }
+    };
+
+</script>
 <style lang="scss" scoped>
     .body{
         width: 100vw;
@@ -37,6 +47,7 @@
     .header{
         display: flex;
         padding: 10px 0px;
+        justify-content: space-between;
         &__nav{
             display: flex;
             flex-direction: row;
